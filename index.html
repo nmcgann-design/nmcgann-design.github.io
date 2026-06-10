@@ -1,13 +1,173 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CHANGE ME</title>
+    <title>NORA'S PAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+          margin: 0;
+          background: #f0e0f7;
+          color: #afa4f8;
+          font-family: "Helvetica Neue", Arial, sans-serif;
+      }
+
+      #all-contents {
+          max-width: 1500px;
+          min-height: 100vh;
+          margin: 0 auto;
+          padding: 32px 40px;
+      }
+      
+      main {
+          display: grid;
+          grid-template-columns: minmax(220px, 1fr) minmax(420px, 1.6fr);
+          align-items: center;
+          min-height: calc(100vh - 160px);
+          gap: clamp(32px, 5vw, 80px);
+      }
+
+      .sidebar{
+          width: 100%;
+      }
+
+      .content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+      }
+      #interests {
+          margin-top: 32px;
+          width: 100%;
+      }
+      #interests h3 {
+        margin: 0 0 12px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #aaa;
+      }
+      #interests ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      #interests li {
+        color: #afa4f8;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 10px 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 100px;
+        transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+        cursor: default;
+      }
+      #interests li:hover{
+        background: #afa4f8;
+        color: #fff;
+        border-color: #afa4f8;
+        transform: translateY(-2px);
+      }
+      .sidebar-img{
+          width: 50%;
+          max-width: 160px;
+          aspect-ratio: 3 / 4;
+          object-fit: cover;
+          display: block;
+          border-radius: 16px;
+          filter: grayscale(50%);
+          box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+          transition: filter 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .sidebar-img:hover{
+        filter: grayscale(0%);
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+      }
+      nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+    padding: 16px 24px;
+    background: #f0e0f7;
+    border: 1px solid #f0e0f7;
+    border-radius: 12px;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #afa4f8;
+}
+
+#nav-ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-li a {
+    color: #afa4f8;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.nav-li a:hover {
+    background: #afa4f8;
+    color: #fff;
+}
+          </style>
   </head>
 
   <body>
     <!-- All content goes here -->
     <div id="all-contents">
-      
+     <nav>
+       <h1>Nora's Website</h1>
+        <ul id="nav-ul">
+          <li class="nav-li"><a href="index.html">Home</a></li>
+          <li class="nav-li"><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </nav>
+
+      <main>
+          <div class="sidebar">
+            <img class="sidebar-img" src="https://sussexcountylibrary.org/wp-content/uploads/2021/07/unicorn-clipart-transparent-13.png" alt="My image"
+          </div>
+
+          <div class="content">
+            <h2>Nora Dorn</h2>
+            <p>Coder Extraordinaire</p>
+
+              <div id="interests"
+              <h3>Interests</h3>
+              <ul>
+                <li>Reading</li>
+                <li>Writing</li>
+                <li>Building Websites</li>
+              </ul>
+          </div>
+      </main>
+
     </div>
   </body>
 </html>
